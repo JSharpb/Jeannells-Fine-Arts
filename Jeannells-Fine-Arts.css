@@ -1,0 +1,887 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  /* Text */
+  --header-text-color: black;
+  --main-text-color: #704020;
+  /* Header */
+  --header-color: #FF5530;
+  --header-border-color: #CF4500;
+  --header-border-width: 2px;
+  /* Works */
+  --gallery-color: #EEDDCC;
+  /* Commissions */
+  --commission-border-width: 1px;
+  /* --commission-border-radius: 0; */
+  /* Poem Border */
+  --Poem-border-color1: var(--accent-color3);
+  /* Misc */
+  --accent-color1: #90C040;
+  --accent-color2: #70A020;
+  --accent-color3: #D49F00;
+  --accent-color4: #947017;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: Raleway, arial;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #FDF0E0;
+}
+
+/* START HEADER */
+
+  header {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+    height: 4rem;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(var(--header-color) calc(100% - var(--header-border-width)), var(--header-border-color) calc(100% - var(--header-border-width)));
+  }
+
+  #site-header {
+    padding: 0 0 0 2rem;
+  }
+
+  #site-header .fas {
+    font-size: 24;
+    color: #551100;
+  }
+
+  #title {
+    display: inline;
+    font-family: "Great Vibes", cursive;
+    font-weight: normal;
+  }
+
+  #menu {
+    padding: 0 1rem;
+    width: 30%;
+    max-width: 26rem;
+    min-width: 15rem;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: stetch;
+  }
+
+  #menu a {
+    color: var(--header-text-color);
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    box-sizing: border-box;
+    border: var(--header-border-width) solid var(--header-border-color);
+    border-top: none;
+    border-bottom: none;
+    background-color: #FDF0E0;
+    color: #502020;
+    font-weight: bold;
+    cursor: default;
+  }
+
+/* END HEADER */
+
+main,
+footer {
+    margin: auto;
+    width: 90vw;
+    max-width: 1200px;
+  }
+
+/* START MAIN */
+
+  section {
+    scroll-margin-top: 7rem;
+  }
+
+  h2 {
+    color: var(--main-text-color);
+  }
+
+    #submit,
+    .commission-select {
+      background-color: var(--accent-color1);
+      height: 2rem;
+      border-width: 1px;
+      border-radius: 2px;
+      font-family: Raleway, arial;
+      font-size: 14px;
+      font-weight: 600;
+      color: beige;
+    }
+
+    .commission-select-text {
+      font-family: Raleway, arial;
+      font-size: 14px;
+      font-weight: 600;
+      color: beige;
+    }
+
+    #submit:active,
+    .commission-select:active {
+      background-color: var(--accent-color2);
+    }
+
+  /* START #HERO */
+
+    #hero {
+      margin-top: 1rem;
+      height: 14rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    #subtitle {
+      text-align: center;
+      font-size: 28px;
+    }
+
+    form {
+      margin: 0;
+      width: 100%;
+      height: 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #email {
+      display: block;
+      border: 3px solid var(--main-text-color);
+      padding: 0 0.25rem;
+      width: 18rem;
+      height: 2.5rem;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    #submit {
+      width: 8rem;
+    }
+
+    #arrows {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .arrow {
+      font-size: 0;
+    }
+
+  /* END #HERO */
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 3px double black;
+    width: 100%;
+  }
+
+  /* START #TALENTS */
+
+    #Talents {
+      padding: 0.3rem 1rem;
+    }
+
+    #talents-list {
+      padding: 0;
+      height: 21rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .talent {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      align-items: center;
+    }
+
+    .talent i {
+      grid-column: 1 / 1;
+      font-size: 48px;
+      text-align: center;
+      color: var(--accent-color3);
+    }
+
+    article {
+      grid-column: 2 / 2;
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    article p,
+    article h2 {
+      display: block;
+      margin: 0;
+    }
+
+    main p {
+      color: var(--main-text-color);
+    }
+
+  /* END #TALENTS */
+
+  /* START #WORKS */
+
+    #Works {
+      padding: 2rem 1rem;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    #works-watercolors {
+      background-color: var(--gallery-color);
+      border: 8px solid var(--gallery-color);
+      border-radius: 2px;
+      max-height: 24rem;
+      aspect-ratio: 320/420;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2px;
+      align-items: center;
+    }
+
+    .watercolor {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    #works-poetry {
+      border-radius: 4px;
+      padding: 0.75rem 1rem 0.5rem;
+      text-align: center;
+      font-family: "Great Vibes", cursive;
+      font-size: 20px;
+      color: var(--main-text-color);
+    }
+
+    #poem {
+      padding: 0 0 1.25rem;
+      margin: 0;
+    }
+
+    #poem:hover {
+      font-family: Raleway, arial;
+      font-size: 14px;
+      line-height: 1.5rem;
+    }
+
+    #poem:before {
+      content: '" ';
+    }
+
+    #poem:after {
+      content: ' "';
+    }
+
+    #works-skulls {
+      background: linear-gradient(
+        var(--gallery-color) 23.3%,
+        transparent 23.3% 50%,
+        var(--gallery-color) 50% 73.2%,
+        transparent 73.2%
+      ),
+      linear-gradient(
+        90deg,
+        var(--gallery-color) 48%,
+        #664433 48% 52%,
+        var(--gallery-color) 52%
+      );
+      border: 8px solid var(--gallery-color);
+      border-radius: 2px;
+      max-height: 24rem;
+      aspect-ratio: 3/4;
+      justify-self: flex-end;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .skull {
+      object-fit: cover;
+      width: 100%;
+    }
+
+  /* END #WORKS */
+
+  /* START #PRICING */
+
+    #Pricing {
+      box-sizing: border-box;
+      margin: 3rem 0;
+      padding: 0rem 0rem;
+      height: 22rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .commission {
+      box-sizing: border-box;
+      /* border-radius: var(--commission-border-radius); */
+      background: 
+      linear-gradient(
+        var(--accent-color4) var(--commission-border-width),
+        transparent var(--commission-border-width) calc(100% - var(--commission-border-width)),
+        var(--accent-color4) calc(100% - var(--commission-border-width))
+      ),
+      linear-gradient(
+        90deg,
+        var(--accent-color4) var(--commission-border-width),
+        transparent var(--commission-border-width) calc(100% - var(--commission-border-width)),
+        var(--accent-color4) calc(100% - var(--commission-border-width))
+      );
+      padding: var(--commission-border-width);
+      height: 100%; /* Change @ #Pricing */
+      width: 33%;
+      max-width: 16rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: center;
+      text-align: center;
+    }
+
+    .commission-type {
+      width: 100%;
+      height: 3rem;
+      min-height: 3rem;
+      margin: 0;
+      /* border-radius: var(--commission-border-radius)
+      var(--commission-border-radius)
+      0
+      0; */
+      background-color: var(--accent-color3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--main-text-color);
+      font-size: 1.4rem;
+    }
+
+    .commission-inner-div {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr max-content 1fr;
+      grid-template-columns: 100%;
+      justify-content: space-between;
+    }
+
+    .commission-price {
+      font-size: 2rem;
+    }
+
+    .commission-description {
+      padding: 0 1ch;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--main-text-color);
+    }
+
+    .commission-description li {
+      text-align: center;
+      display: block;
+      line-height: 1.5rem;
+    }
+
+    .commission-select {
+      width: 55%;
+      margin: 0 auto 2.5rem;
+      align-self: end;
+    }
+
+  /* END #PRICING */
+
+/* END MAIN */
+
+/* START FOOTER */
+
+  footer {
+    background-color: #F0E0D0;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    padding: 0 2rem 0.75rem 1rem;
+    border-radius: 0 0 10px 10px;
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  #copyright {
+    color: #704020C0
+  }
+
+  #footer-menu {
+    width: 14rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-link {
+    margin: 0;
+    padding: 0;
+    color: var(--main-text-color);
+  }
+
+/* END FOOTER */
+
+
+          /* WIDTH VARIATIONS */
+
+
+  @media only screen and (max-width: 860px) {
+
+    header {
+      padding: 0 1rem;
+    }
+
+    #site-header {
+      padding-left: 1rem;
+    }
+    
+    #menu {
+      padding: 0;
+      width: 40%;
+      max-width: 21rem;
+    }
+    
+    #Works {
+      padding: 0;
+      grid-template-rows: repeat(3, max-content);
+      grid-template-columns: 100%;
+      row-gap: 3rem;
+    }
+
+    #works-watercolors {
+      justify-self: center;
+    }
+
+    #works-poetry {
+      align-self: center;
+      font-size: 26px;
+    }
+
+    #poem:hover {
+      font-size: 19px;
+      line-height: 2rem;
+    }
+
+    #works-skulls {
+      justify-self: center;
+    }
+
+
+
+    #Pricing {
+      height: auto;
+    }
+    
+    .commission {
+      height: auto;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 860px) and (min-width: 701px) {
+
+    #works-watercolors {
+      border-width: 2px;
+      padding: 0 7px;
+      max-height: none;
+      aspect-ratio: 432 / 247;
+      justify-self: center;
+      grid-template-columns: 1fr 30% 1fr;
+      column-gap: 7px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    #diverging-branch {
+      grid-column: 1 / 1;
+    }
+
+    #thin-branch {
+      grid-column: 3 / 3;
+      justify-self: end;
+    }
+
+    #bust {
+      grid-row: 1 / 1;
+      grid-column: 2 / 2;
+      margin-top: -74%;
+    }
+
+    #cabin {
+      grid-row: 1 / 1;
+      grid-column: 2 / 2;
+      margin-bottom: -105%;
+    }
+
+    #works-skulls {
+      background: linear-gradient(
+        var(--gallery-color) 46.5%,
+        transparent 46.5%
+      ),
+      linear-gradient(
+        90deg,
+        var(--gallery-color) 23%,
+        #664433 23% 27%,
+        var(--gallery-color) 27%,
+        var(--gallery-color) 48%,
+        #664433 48% 52%,
+        var(--gallery-color) 52%,
+        var(--gallery-color) 73%,
+        #664433 73% 77%,
+        var(--gallery-color) 77%
+      );
+      max-height: none;
+      aspect-ratio: auto;
+      grid-template-columns: repeat(4, 1fr);
+      justify-self: center;
+    }
+
+    #Pricing {
+      margin: 0 auto -1rem;
+      padding: 0 0.5rem;
+      width: 100%;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .commission {
+      width: 100%;
+      max-width: none;
+    }
+
+    .commission-inner-div {
+      height: 12rem;
+      grid-template-columns: 13rem 1fr 6rem;
+      grid-template-rows: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 0;
+    }
+
+    .commission-price {
+      /* background-color: red; */
+      margin: -1rem 0 0;
+      font-size: 3rem;
+    }
+
+    .commission-description {
+      /* background-color: blue; */
+      margin: 0;
+      padding: 0;
+      list-style-type: disc;
+      list-style-position: inside;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, max-content);
+      gap: 0.5rem;
+      align-items: start;
+      text-align: left;
+    }
+
+    .commission-description li {
+      display: list-item;
+      padding-right: 2ch;
+      text-align: left;
+    }
+
+    .commission-select {
+      margin: 0;
+      border: none;
+      border-top: 1px solid var(--accent-color4);
+      border-left: 1px solid var(--accent-color4);
+      border-radius: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      text-align: left;
+    }
+
+    .commission-select-text {
+      position: relative;
+      left: 50%;
+      display: inline-block;
+      transform: translate(-50%, 0) rotate(90deg);
+      font-size: 1.1rem;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    
+    #site-header {
+      padding: 0;
+      font-size: 0.85rem;
+    }
+
+    #menu {
+      min-width: 13rem;
+    }
+
+    main,
+    footer {
+      width: 96vw;
+    }
+    
+    #hero {
+      margin: 0;
+      padding: 0;
+      height: calc(100vh - 4rem);
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    hr {
+      margin: 4rem 0;
+    }
+
+    hr:first-of-type {
+      margin-top: 0;
+    }
+
+    #arrows {
+      height: 100%;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    .arrow {
+      font-size: 2.5rem;
+    }
+
+
+
+    #Talents {
+      height: auto;
+    }
+
+    #talents-list {
+      height: auto;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .talent {
+      width: 80vw;
+      max-width: 29rem;
+      grid-template-columns: 100%;
+      grid-template-rows: max-content max-content;
+      align-items: stretch;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .talent i {
+      font-size: 8rem;
+    }
+
+    article {
+      margin-bottom: 1rem;
+      height: auto;
+      grid-column: 1 / 1;
+      text-align: center;
+      font-size: 1.25rem;
+      gap: 2rem;
+    }
+
+    article h2 {
+      font-size: 2.5rem;
+    }
+
+    article p {
+      line-height: 2rem;
+    }
+
+
+
+    #works-watercolors {
+      width: 85%;
+    }
+
+    #works-skulls {
+      width: 85%;
+    }
+
+
+
+    #Pricing {
+      margin: 0 auto -1rem;
+      width: 96%;
+      max-width: 28rem;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .commission {
+      width: 100%;
+      max-width: none;
+    }
+
+    .commission-type {
+      height: 5rem;
+      min-height: 5rem;
+      font-size: 2.5rem;
+    }
+
+    .commission-inner-div {
+      grid-template-rows: repeat(3, max-content);
+      gap: 2rem;
+    }
+
+    .commission-price {
+      font-size: 3.5rem;
+      line-height: rem;
+      margin: 2rem auto 0;
+    }
+
+    .commission-description {
+      font-size: 1.5rem;
+      gap: 1rem;
+    }
+
+    .commission-select {
+      margin-top: 0.25rem;
+      margin-bottom: 3rem;
+      height: 3rem;
+      font-size: 1.25rem;
+    }
+
+    .commission-select-text {
+      font-size: 1.25rem;
+    }
+  }
+
+  footer {
+    padding-right: 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+    header {
+      height: 3.5rem;
+    }
+
+    #site-header {
+      font-size: 0.8rem;
+    }
+    
+    #menu {
+      font-size: 0.9rem;
+    }
+
+    section {
+      scroll-margin-top: 8rem;
+    }
+
+    footer {
+      padding-bottom: 1rem;
+      height: 3.5rem;
+    }
+    
+    #copyright {
+      margin-bottom: -0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+  }
+
+  @media only screen and (max-width: 480px) {
+
+    header {
+      height: 6.5rem;
+      flex-direction: column;
+    }
+
+    #site-header {
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    #menu {
+      width: 75%;
+      font-size: 1rem;
+    }
+
+    .nav-link:hover {
+      box-sizing: border-box;
+      border: var(--header-border-width) solid var(--header-border-color);
+      border-bottom: none;
+    }
+
+    #pricing {
+      padding: 0 0.25rem;
+    }
+
+    footer {
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      border-radius: 0;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
+      width: 100%;
+      height: 5rem;
+      flex-direction: column-reverse;
+      align-items: center;
+      
+    }
+
+    #footer-menu {
+      width: 13rem;
+    }
+
+    #copyright {
+      display: block;
+    }
+
+  }
