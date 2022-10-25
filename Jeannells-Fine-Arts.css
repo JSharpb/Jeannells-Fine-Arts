@@ -492,6 +492,7 @@ footer {
     
     #Works {
       padding: 0;
+      max-width: none;
       grid-template-rows: repeat(3, max-content);
       grid-template-columns: 100%;
       row-gap: 3rem;
@@ -513,6 +514,7 @@ footer {
 
     #works-skulls {
       justify-self: center;
+      max-width: none;
     }
 
 
